@@ -9,7 +9,7 @@
 .vscode
 .idea
 
-# Documentation (customize if your app needs markdown files)
+# Documentation
 README.md
 LICENSE
 
