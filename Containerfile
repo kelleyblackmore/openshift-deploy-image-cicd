@@ -56,11 +56,11 @@ RUN set -eux; \
     ARCH="$(uname -m)"; \
     case "${ARCH}" in \
       x86_64) OC_ARCH="linux" ;; \
-      aarch64) OC_ARCH="linux-aarch64" ;; \
+      aarch64) OC_ARCH="linux-arm64" ;; \
       *) echo "Unsupported architecture: ${ARCH}" >&2; exit 1 ;; \
     esac; \
     curl -fsSL -o /tmp/oc.tar.gz \
-      "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/${OC_ARCH}/oc.tar.gz"; \
+      "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-${OC_ARCH}.tar.gz"; \
     tar -xzf /tmp/oc.tar.gz -C /tmp oc kubectl; \
     mv /tmp/oc /usr/local/bin/oc; \
     mv /tmp/kubectl /usr/local/bin/kubectl; \
