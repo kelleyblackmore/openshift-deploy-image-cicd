@@ -24,7 +24,6 @@ RUN microdnf update -y && \
     microdnf install -y \
       bash \
       ca-certificates \
-      curl \
       findutils \
       git \
       gzip \
